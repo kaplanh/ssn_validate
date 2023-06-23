@@ -1,7 +1,13 @@
 body{
-    height: 91.4vh;
+    height: 90vh;
     background-image: url('./validate.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
      background-position: center;
+}
+input{
+    height: 40px;
+}
+button{
+    height: 36.5px;
 }
