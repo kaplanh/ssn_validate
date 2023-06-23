@@ -7,21 +7,31 @@ const btn = document.getElementById("btn");
 const input = document.getElementById("input");
 
 btn.addEventListener("click", () => {
+  const result = document.getElementById("result");
   if (validateSSN(input.value)) {
-    const result = document.getElementById("result");
     result.innerHTML = ` <p class="fs-2 m-5"  style="color:green">${input.value} is a valid SSN.🎉</p>`;
-  } else {if (input.value) {result.innerHTML = `<p class="fs-2 m-5"  style="color:red">${input.value} is not a valid SSN.💥</p>`;input.value = "";
-  input.focus();
+    input.value = ''
+     input.focus();
+   
   } else {
-    input.focus();
+    if (input.value) {
+      result.innerHTML = `<p class="fs-2 m-5"  style="color:red">${input.value} is not a valid SSN.💥</p>`;
+      input.value = "";
+      input.focus();
+      
+    } else {
+      alert('please enter your ssn')
+      input.focus();
+    }
   }
+  setTimeout(() => {
+       return  result.innerText=''
+      },3000)
   
-  }
-    
 });
 
-window, addEventListener('keydown', (e) => {
-  if (e.key == 'Enter') {
-    btn.click()
-  }
-})
+window.addEventListener("keydown", (e) => {
+    if (e.key == "Enter") {
+      btn.click();
+    }
+  });
