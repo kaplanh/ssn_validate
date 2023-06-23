@@ -1,13 +1,8 @@
 body{
-    height: 90vh;
+    height: 91.2vh;
+    width: 100vw;
     background-image: url('./validate.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
      background-position: center;
-}
-input{
-    height: 40px;
-}
-button{
-    height: 36.5px;
 }
